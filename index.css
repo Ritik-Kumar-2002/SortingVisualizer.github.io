@@ -1,0 +1,205 @@
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.body{
+    background-color: whitesmoke;
+    
+}
+.icons{
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.anchor{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.buttons_collections{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    /* white-space: 1rem; */
+}
+.wrapper{
+    width: 80%;
+}
+.buttons_collections button{
+    margin : 0.4rem;
+}
+.heading{
+    font-family: "Lobster";
+    color: whitesmoke;
+    background-color: rgb(7, 7, 74);
+    /* background-color: rgb(14, 11, 102); */
+    padding: 1rem;
+    /* font-size: 3em; */
+    text-align: center;
+}
+.subheading{
+    color: rgb(7, 7, 74);
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    /* font-weight: bold; */
+}
+
+.textContainer{
+    width: 60%;
+    margin: auto;
+    color: rgb(7, 7, 74);
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    background: whitesmoke;
+    
+}
+.textContainer p{
+    font-size: 1.2rem;
+}
+.BubbleSortTextContainer{
+    width: 60%;
+    margin: auto;
+    color: rgb(7, 7, 74);
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    background: whitesmoke;
+    font-size: 1.2rem;
+}
+#barWrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    /* min-height: 55vh; */
+    margin-bottom: 1rem;
+}
+.bar{
+    transition: height 2s;
+    width: 2rem;
+    flex-direction: column-reverse;
+}
+
+.footer{
+    background-color: rgb(7, 7, 74);
+    color: whitesmoke;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer div{
+    font-family: 'Merriweather', serif;
+}
+.footer p{
+    font-size: 1.2rem;
+    /* font-family: "lobster"; */
+    font-family: 'Merriweather', serif;
+}
+
+.sidebarWrapper{
+    /* color: rgb(7, 7, 74); */
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    display: none;
+    
+}
+.sidebarWrapper ul{
+    list-style-type: none;
+}
+.sidebarWrapper ul li{
+    color: rgb(7, 7, 74);
+    /* text-align: center; */
+    /* padding: 1rem; */
+    width: auto;
+    min-height: 3rem;
+    width: 100%;
+    padding-left: 1rem;
+}
+.sidebarWrapper ul li:hover{
+    background-color: rgb(239, 242, 245);
+}
+@media screen and (max-width: 450px) {
+    .footer {
+        flex-wrap: wrap;
+        /* text-align: center;  */
+        text-align:  center;
+    }
+    .footer div{
+        width: 100%;
+        margin: 0.4rem;
+    }
+    .BubbleSortTextContainer{
+        width: 90%;
+        /* background-color: orange; */
+    }
+    .textContainer{
+        width: 90%;
+    }
+    .header div{
+
+       justify-content: space-evenly;
+       flex-wrap: wrap;
+    }
+    .buttons_collections{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        /* width: 100%; */
+        /* align-content: center; */
+        display: none;
+    }
+    .arrayManipulatingButton{
+        justify-content: space-around;
+        width: 100%;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* background-color: aquamarine; */
+    }
+    #barWrapper{
+        padding: 0.5rem;
+    }
+    .icons{
+        display: block;
+    }
+  }

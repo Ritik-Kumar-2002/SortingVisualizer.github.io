@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <div>
+        <h1 class="heading"> Sorting Algorithm Visualizer </h1>
+    </div>
+    
+
+    <div class="header">
+       
+        <div class="arrayManipulatingButton">
+            <div class="icons" onclick="openSideBar()"> 
+                <span class="material-icons">
+                    menu
+                </span>
+            </div> 
+            <button type="button" class="btn btn-outline-info" onclick="GenerateArray()"> Generate Array </button>
+            <button type="button" class="btn btn-outline-info" id="remove" onclick="ClearArray()"> Clear Array </button>
+        </div>
+
+        <!-- <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sorting Algorithms
+            </button>
+            <ul class="dropdown-menu">
+                <button><a class="dropdown-item" href="#">Dropdown item</a></button>
+                <button><a class="dropdown-item" href="#">Dropdown item</a></button>
+                <button><a class="dropdown-item" href="#">Dropdown item</a></button>
+            </ul>
+        </div> -->
+
+        <div class="sidebarWrapper" id="sidebar"> 
+            <ul>
+                <li onclick="BUBBLE_SORT()"> BUBBLE SORT </li>
+                <li onclick="QUICK_SORT()"> QUICK SORT </li>
+                <li onclick="SELECTION_SORT()"> SELECTION SORT </li>
+                <li onclick="INSERTION_SORT()"> INSERTION SORT </li>
+            </ul>
+        </div>
+        <div class="buttons_collections">
+            <button class="btn btn-outline-info" onclick="BUBBLE_SORT()"> BUBBLE SORT </button>
+            <button class="btn btn-outline-info" onclick="QUICK_SORT()"> QUICK SORT </button>
+            <button class="btn btn-outline-info" onclick="INSERTION_SORT()"> INSERTION SORT
+            </button>
+            <button class="btn btn-outline-info" onclick="SELECTION_SORT()"> SELECTION SORT
+            </button>
+        </div>
+        <div class="wrapper">
+            <h2 class="subheading"> Size Of Array</h2>
+            <input type="range" onchange="ArrayRangeCalculate(this.value)" />
+        </div>
+    </div>
+    <div id="barWrapper"> </div>
+    <section>
+        <div id="SortingAlgorithm" class="textContainer">
+            <h1>Sorting Algorithms</h1>
+            <p> Sorting algorithms are used to sort a data structure according to a specific order relationship, such as
+                numerical order or lexicographical order.</p>
+            <p>This operation is one of the most important and widespread in computer science. For a long time, new
+                methods have been developed to make this procedure faster and faster.</p>
+            <p> There are currently hundreds of different sorting algorithms, each with its own specific
+                characteristics. They are classified according to two metrics: space complexity and time complexity.</p>
+            <p> Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ,
+                Ω, representing respectively the upper bound, the tight bound, and the lower bound of the algorithm's
+                complexity, specifying in brackets an expression in terms of n, the number of the elements of the data
+                structure.
+            </p>
+            <p> Most of them fall into two categories:</p>
+            <p> Logarithmic
+                The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+                An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log
+                n).</p>
+            <p> Quadratic
+                The complexity is proportional to the square of n.
+                An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).</p>
+            <p> Space and time complexity can also be further subdivided into 3 different cases: best case, average case
+                and worst case.</p>
+            <p> Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing
+                sorting algorithms can be a great way to better understand their functioning while having fun!</p>
+            <p> The bigger bubbles reach the top faster than smaller bubbles, and this algorithm works in the same way.
+                It iterates through the data structure and for each cycle compares the current element with the next
+                one, swapping them if they are in the wrong order.</p>
+            <p> It's a simple algorithm to implement, but not much efficient: on average, quadratic sorting algorithms
+                with the same time complexity such as Selection Sort or Insertion Sort perform better.</p>
+        </div>
+    </section>
+    <section>
+        <div id="BubbleSort" class="textContainer">
+            <h1> BUBBLE SORT </h1>
+            <p>Bubble Sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water.
+                The bubbles represents the elements of the data structure.</p>
+            <p>
+                The bigger bubbles reach the top faster than smaller bubbles, and this algorithm works in the same way.
+                It iterates through the data structure and for each cycle compares the current element with the next
+                one, swapping them if they are in the wrong order.
+            </p>
+            <p> It's a simple algorithm to implement, but not much efficient: on average, quadratic sorting algorithms
+                with the same time complexity such as Selection Sort or Insertion Sort perform better.
+            </p>
+            <h3> COMPLEXITY </h3>
+            <p> Average Complexity 0(n2) </p>
+            <p> Best Complexity O(n2) </p>
+            <p> Worst Complexity 0(n2) </p>
+            <p> Space Complexity O(1) </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="SelectionSort" class="textContainer">
+            <h1> SELECTION SORT </h1>
+            <p>Selection Sort is an iterative and in-place sorting algorithm that divides the data structure in two
+                sublists: the ordered one, and the unordered one. The algorithm loops for all the elements of the data
+                structure and for every cycle picks the smallest element of the unordered sublist and adds it to the
+                sorted sublist, progressively filling it.</p>
+            <p>
+                It's a really simple and intuitive algorithm that does not require additional memory, but it's not
+                really efficient on big data structures due to its quadratic time complexity.
+            </p>
+
+            <h3> COMPLEXITY </h3>
+            <p> Average Complexity 0(n2) </p>
+            <p> Best Complexity O(n2) </p>
+            <p> Worst Complexity 0(n2) </p>
+            <p> Space Complexity O(1) </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="QuickSort" class="textContainer">
+            <h1> QUICK SORT </h1>
+            <p> Quick Sort is a sorting algorithm based on splitting the data structure in smaller partitions and sort
+                them recursively until the data structure is sorted.</p>
+            <p> This division in partitions is done based on an element, called pivot: all the elements bigger than the
+                pivot get placed on the right side of the structure, the smaller ones to the left, creating two
+                partitions. Next, this procedure gets applied recursively to the two partitions and so on.
+            </p>
+            <h3> COMPLEXITY </h3>
+            <p> Average Complexity 0(n x log n) </p>
+            <p> Best Complexity O(n x log n) </p>
+            <p> Worst Complexity 0(n2) </p>
+            <p> Space Complexity O(n) </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="InsertionSort" class="textContainer">
+            <h1> INSERTION SORT </h1>
+            <p> Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It's
+                less performant than advanced sorting algorithms, but it can still have some advantages: it's really
+                easy to implement and it's efficient on small data structures almost sorted.</p>
+            <p> The algorithm divides the data structure in two sublists: a sorted one, and one still to sort.
+                Initially, the sorted sublist is made up of just one element and it gets progressively filled. For every
+                iteration, the algorithm picks an element on the unsorted sublist and inserts it at the right place in
+                the sorted sublist. It's available in several variants such as Gnome Sort.
+            </p>
+            <h3> COMPLEXITY </h3>
+            <p> Average Complexity 0(n2) </p>
+            <p> Best Complexity O(n) </p>
+            <p> Worst Complexity 0(n2) </p>
+            <p> Space Complexity O(1) </p>
+        </div>
+    </section>
+    <!-- FOOTER OF THE WEBSITE  -->
+
+    <div class="footer">
+        <div>
+            <p> SORT VISUALIZER </p>
+            <div><a href="#" class="anchor">Bubble Sort</a></div>
+            <div> <a href="#" class="anchor"> Insertion Sort</a></div>
+            <div><a href="#" class="anchor"> Selection Sort</a> </div>
+            <div><a href="#" class="anchor"> QuickSort</a></div>
+        </div>
+        <div>
+            <p>CONTACT </p>
+            <div> ritikkhanna079@gmail.com</div>
+            <div> Ritik kumar </div>
+        </div>
+        <!-- <div>
+            <p> REFRENCE </p>
+            <div> GIT HUB
+               
+            </div>
+
+            <div>Wikipedia 
+                <span class="material-symbols-outlined">
+                    language
+                </span>
+            </div>
+        </div> -->
+    </div>
+</body>
+<script src="./index.js"> </script>
+
+</html>
