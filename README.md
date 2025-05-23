@@ -1,10 +1,10 @@
 # SortingAlgorithmVisualizer
 
-<-- ------------------- || Sorting Algorithm Visualizer || --------------------- -->
+<!-- ------------------- || Sorting Algorithm Visualizer || --------------------- -->
 
 # 🔢 Sorting Algorithm Visualizer
 
-![Sorting Visualizer](https://ritik-kumar-2002.github.io/SortingVisualizer.github.io/) <!-- Optional: add demo GIF if available -->
+![Sorting Visualizer]( https://ritik-kumar-2002.github.io/SortingVisualizer.github.io/ ) 
 
 **Overview**- A simple and intuitive **Sorting Algorithm Visualizer** that helps you understand how different sorting algorithms work through animations.
 
